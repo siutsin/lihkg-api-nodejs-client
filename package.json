@@ -17,6 +17,7 @@
   "author": "Simon Li",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "chai": "^3.5.0",
     "codecov": "^1.0.1",
     "coveralls": "^2.11.15",

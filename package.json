@@ -1,12 +1,14 @@
 {
   "name": "lihkg-api-nodejs-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API client for LIHKG",
-  "main": "lib/lihkg.js",
+  "main": "./distribution/lihkg.js",
   "scripts": {
     "test": "gulp",
     "debug": "babel-node-debug ./lib/lihkg.js",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "build": "babel lib --out-dir distribution",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "lihkg",

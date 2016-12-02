@@ -7,21 +7,21 @@ const Constants = require('../lib/constants');
 describe('Thread', () => {
 
   it('should get the latest threads from 吹水台', done => {
-    lihkg.getLatestThreads().then(result => {
+    lihkg.getLatestBlowWater().then(result => {
       expect(result.response.category.name).to.equal('吹水台');
       done();
     });
   });
 
   it('should get the latest hot threads', done => {
-    lihkg.getLatestHotThreads().then(result => {
+    lihkg.getLatestHot().then(result => {
       expect(result.response.category.name).to.equal('熱　門');
       done();
     });
   });
 
   it('should get the latest new threads', done => {
-    lihkg.getLatestNewThreads().then(result => {
+    lihkg.getLatestNew().then(result => {
       expect(result.response.category.name).to.equal('最　新');
       done();
     });

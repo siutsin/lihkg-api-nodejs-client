@@ -19,7 +19,7 @@ npm install lihkg-api-nodejs-client --save
 
 ```javascript
 const lihkg = require('lihkg-api-nodejs-client');
-lihkg.getLatestThreads().then(result => {
+lihkg.getLatestBlowWater().then(result => {
   // threads from 吹水台
 }).catch(error => {
   // handle error
@@ -30,18 +30,18 @@ lihkg.getLatestThreads().then(result => {
 
 #### Thread
 
-* [.getLatestThreads([page, count]) ⇒ `Promise`](#thread.getLatestThreads)
-* [.getLatestHotThreads([page, count]) ⇒ `Promise`](#thread.getLatestHotThreads)
-* [.getLatestNewThreads([page, count]) ⇒ `Promise`](#thread.getLatestNewThreads)
+* [.getLatestBlowWater([page, count]) ⇒ `Promise`](#thread.getLatestBlowWater)
+* [.getLatestHot([page, count]) ⇒ `Promise`](#thread.getLatestHot)
+* [.getLatestNew([page, count]) ⇒ `Promise`](#thread.getLatestNew)
 * [.getChannel(category, [page, count]) ⇒ `Promise`](#thread.getChannel)
 * [.getThread(threadID, [page, count]) ⇒ `Promise`](#thread.getThread)
 * [.search(query, [page, count]) ⇒ `Promise`](#thread.search)
 
 ### Thread
 
-<a name="thread.getLatestThreads"></a>
+<a name="thread.getLatestBlowWater"></a>
 
-#### .getLatestThreads([page, count]) ⇒ `Promise`
+#### .getLatestBlowWater([page, count]) ⇒ `Promise`
 Use this method to get the latest threads in 吹水台.
 
 | Param | Type | Description |
@@ -49,9 +49,9 @@ Use this method to get the latest threads in 吹水台.
 | [page] | `Number` | default: 1 |
 | [count] | `Number` | default: 30 |
 
-<a name="thread.getLatestHotThreads"></a>
+<a name="thread.getLatestHot"></a>
 
-#### .getLatestHotThreads([page, count]) ⇒ `Promise`
+#### .getLatestHot([page, count]) ⇒ `Promise`
 Use this method to get the latest hot threads.
 
 | Param | Type | Description |
@@ -59,9 +59,9 @@ Use this method to get the latest hot threads.
 | [page] | `Number` | default: 1 |
 | [count] | `Number` | default: 30 |
 
-<a name="thread.getLatestNewThreads"></a>
+<a name="thread.getLatestNew"></a>
 
-#### .getLatestNewThreads([page, count]) ⇒ `Promise`
+#### .getLatestNew([page, count]) ⇒ `Promise`
 Use this method to get the latest new threads.
 
 | Param | Type | Description |

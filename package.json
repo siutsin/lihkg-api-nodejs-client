@@ -27,6 +27,7 @@
     "chai": "^3.5.0",
     "codecov": "^1.0.1",
     "coveralls": "^2.11.15",
+    "dotenv": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-babel-istanbul": "^1.5.0",
     "gulp-mocha": "^3.0.1",
@@ -34,6 +35,7 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "axios": "^0.15.3"
+    "axios": "^0.15.3",
+    "crypto-js": "^3.1.8"
   }
 }

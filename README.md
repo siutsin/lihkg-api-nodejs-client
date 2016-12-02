@@ -37,6 +37,10 @@ lihkg.getLatestBlowWater().then(result => {
 * [.getThread(threadID, [page, count]) ⇒ `Promise`](#thread.getThread)
 * [.search(query, [page, count]) ⇒ `Promise`](#thread.search)
 
+#### Auth
+
+* [.login(email, password) ⇒ `Promise`](#auth.login)
+
 ### Thread
 
 <a name="thread.getLatestBlowWater"></a>
@@ -101,6 +105,18 @@ Use this method to search threads contain the query in the title.
 | query | `String` | query string |
 | [page] | `Number` | default: 1 |
 | [count] | `Number` | default: 30 |
+
+### Auth
+
+<a name="auth.login"></a>
+
+#### .login(email, password) ⇒ `Promise`
+Use this method to login. User ID and token is cached for further authentication.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| email | `String` | username |
+| password | `String` | password |
 
 ## Special Thanks
 

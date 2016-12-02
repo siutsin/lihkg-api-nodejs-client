@@ -1,4 +1,6 @@
 'use strict';
 
-// Thread Tests
+require('dotenv').config();
+
 require('./testThread');
+require('./testAuth');

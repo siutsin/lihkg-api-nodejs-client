@@ -19,7 +19,7 @@ npm install lihkg-api-nodejs-client --save
 
 ```javascript
 const lihkg = require('lihkg-api-nodejs-client');
-lihkg.getLatestThreads().then(result => {
+lihkg.getLatestBlowWater().then(result => {
   // threads from 吹水台
 }).catch(error => {
   // handle error
@@ -28,45 +28,79 @@ lihkg.getLatestThreads().then(result => {
 
 ## Usage
 
-#### Threads
+#### Thread
 
-* [.getLatestThreads([page, count]) ⇒ <code>Promise</code>](#getLatestThreads)
-* [.getChannel(category, [page, count]) ⇒ <code>Promise</code>](#getChannel)
-* [.getThread(threadID, [page, count]) ⇒ <code>Promise</code>](#getThread)
+* [.getLatestBlowWater([page, count]) ⇒ `Promise`](#thread.getLatestBlowWater)
+* [.getLatestHot([page, count]) ⇒ `Promise`](#thread.getLatestHot)
+* [.getLatestNew([page, count]) ⇒ `Promise`](#thread.getLatestNew)
+* [.getChannel(category, [page, count]) ⇒ `Promise`](#thread.getChannel)
+* [.getThread(threadID, [page, count]) ⇒ `Promise`](#thread.getThread)
+* [.search(query, [page, count]) ⇒ `Promise`](#thread.search)
 
-<a name="getLatestThreads"></a>
+### Thread
 
-### Threads
+<a name="thread.getLatestBlowWater"></a>
 
-#### .getLatestThreads([page, count]) ⇒ <code>Promise</code>
+#### .getLatestBlowWater([page, count]) ⇒ `Promise`
 Use this method to get the latest threads in 吹水台.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [page] | <code>Number</code> | default: 1 |
-| [count] | <code>Number</code> | default: 30 |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
 
-<a name="getChannel"></a>
+<a name="thread.getLatestHot"></a>
 
-#### .getChannel(category, [page, count]) ⇒ <code>Promise</code>
+#### .getLatestHot([page, count]) ⇒ `Promise`
+Use this method to get the latest hot threads.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+<a name="thread.getLatestNew"></a>
+
+#### .getLatestNew([page, count]) ⇒ `Promise`
+Use this method to get the latest new threads.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+<a name="thread.getChannel"></a>
+
+#### .getChannel(category, [page, count]) ⇒ `Promise`
 Use this method to get the threads in a category(channel).
 
 | Param | Type | Description |
 | --- | --- | --- |
-| category | <code>Number</code> | Refer to [Categories](https://github.com/siutsin/lihkg-api-nodejs-client/blob/master/lib/constants.js) |
-| [page] | <code>Number</code> | default: 1 |
-| [count] | <code>Number</code> | default: 30 |
+| category | `Number` | Refer to [Categories](https://github.com/siutsin/lihkg-api-nodejs-client/blob/master/lib/constants.js) |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
 
-<a name="getThread"></a>
+<a name="thread.getThread"></a>
 
-#### .getThread(threadID, [page, count]) ⇒ <code>Promise</code>
+#### .getThread(threadID, [page, count]) ⇒ `Promise`
 Use this method to get a thread for the unique ID.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| threadID | <code>Number</code> | Thread id returned from the threads list |
-| [page] | <code>Number</code> | default: 1 |
-| [count] | <code>Number</code> | default: 30 |
+| threadID | `Number` | Thread id returned from the threads list |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+<a name="thread.search"></a>
+
+#### .search(query, [page, count]) ⇒ `Promise`
+Use this method to search threads contain the query in the title.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| query | `String` | query string |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
 
 ## Special Thanks
 

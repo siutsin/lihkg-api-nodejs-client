@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/siutsin/lihkg-api-nodejs-client.svg?branch=master)](https://travis-ci.org/siutsin/lihkg-api-nodejs-client)
 [![Coverage Status](https://coveralls.io/repos/github/siutsin/lihkg-api-nodejs-client/badge.svg)](https://coveralls.io/github/siutsin/lihkg-api-nodejs-client)
 
-lihkg-api-nodejs-client
+# lihkg-api-nodejs-client
 =========
 
 LIHKG API client for node.js
@@ -15,11 +15,20 @@ LIHKG API client for node.js
 npm install lihkg-api-nodejs-client --save
 ```
 
-```
+## TL;DR
+
+```javascript
 const lihkg = require('lihkg-api-nodejs-client');
+lihkg.getLatestThreads().then(result => {
+  // threads from 吹水台
+}).catch(error => {
+  // handle error
+});
 ```
 
 ## Usage
+
+#### Threads
 
 * [.getLatestThreads([page, count]) ⇒ <code>Promise</code>](#getLatestThreads)
 * [.getChannel(category, [page, count]) ⇒ <code>Promise</code>](#getChannel)
@@ -27,7 +36,9 @@ const lihkg = require('lihkg-api-nodejs-client');
 
 <a name="getLatestThreads"></a>
 
-### .getLatestThreads([page, count]) ⇒ <code>Promise</code>
+### Threads
+
+#### .getLatestThreads([page, count]) ⇒ <code>Promise</code>
 Use this method to get the latest threads in 吹水台.
 
 | Param | Type | Description |
@@ -37,7 +48,7 @@ Use this method to get the latest threads in 吹水台.
 
 <a name="getChannel"></a>
 
-### .getChannel(category, [page, count]) ⇒ <code>Promise</code>
+#### .getChannel(category, [page, count]) ⇒ <code>Promise</code>
 Use this method to get the threads in a category(channel).
 
 | Param | Type | Description |
@@ -48,7 +59,7 @@ Use this method to get the threads in a category(channel).
 
 <a name="getThread"></a>
 
-### .getThread(threadID, [page, count]) ⇒ <code>Promise</code>
+#### .getThread(threadID, [page, count]) ⇒ <code>Promise</code>
 Use this method to get a thread for the unique ID.
 
 | Param | Type | Description |

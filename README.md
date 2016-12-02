@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/siutsin/lihkg-api-nodejs-client.svg?branch=master)](https://travis-ci.org/siutsin/lihkg-api-nodejs-client)
 [![Coverage Status](https://coveralls.io/repos/github/siutsin/lihkg-api-nodejs-client/badge.svg)](https://coveralls.io/github/siutsin/lihkg-api-nodejs-client)
 
-lihkg-api-nodejs-client
+# lihkg-api-nodejs-client
 =========
 
 LIHKG API client for node.js
@@ -15,47 +15,108 @@ LIHKG API client for node.js
 npm install lihkg-api-nodejs-client --save
 ```
 
-```
+## TL;DR
+
+```javascript
 const lihkg = require('lihkg-api-nodejs-client');
+lihkg.getLatestBlowWater().then(result => {
+  // threads from 吹水台
+}).catch(error => {
+  // handle error
+});
 ```
 
 ## Usage
 
-* [.getLatestThreads([page, count]) ⇒ <code>Promise</code>](#getLatestThreads)
-* [.getChannel(category, [page, count]) ⇒ <code>Promise</code>](#getChannel)
-* [.getThread(threadID, [page, count]) ⇒ <code>Promise</code>](#getThread)
+#### Thread
 
-<a name="getLatestThreads"></a>
+* [.getLatestBlowWater([page, count]) ⇒ `Promise`](#thread.getLatestBlowWater)
+* [.getLatestHot([page, count]) ⇒ `Promise`](#thread.getLatestHot)
+* [.getLatestNew([page, count]) ⇒ `Promise`](#thread.getLatestNew)
+* [.getChannel(category, [page, count]) ⇒ `Promise`](#thread.getChannel)
+* [.getThread(threadID, [page, count]) ⇒ `Promise`](#thread.getThread)
+* [.search(query, [page, count]) ⇒ `Promise`](#thread.search)
 
-### .getLatestThreads([page, count]) ⇒ <code>Promise</code>
+#### Auth
+
+* [.login(email, password) ⇒ `Promise`](#auth.login)
+
+### Thread
+
+<a name="thread.getLatestBlowWater"></a>
+
+#### .getLatestBlowWater([page, count]) ⇒ `Promise`
 Use this method to get the latest threads in 吹水台.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [page] | <code>Number</code> | default: 1 |
-| [count] | <code>Number</code> | default: 30 |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
 
-<a name="getChannel"></a>
+<a name="thread.getLatestHot"></a>
 
-### .getChannel(category, [page, count]) ⇒ <code>Promise</code>
+#### .getLatestHot([page, count]) ⇒ `Promise`
+Use this method to get the latest hot threads.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+<a name="thread.getLatestNew"></a>
+
+#### .getLatestNew([page, count]) ⇒ `Promise`
+Use this method to get the latest new threads.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+<a name="thread.getChannel"></a>
+
+#### .getChannel(category, [page, count]) ⇒ `Promise`
 Use this method to get the threads in a category(channel).
 
 | Param | Type | Description |
 | --- | --- | --- |
-| category | <code>Number</code> | Refer to [Categories](https://github.com/siutsin/lihkg-api-nodejs-client/blob/master/lib/constants.js) |
-| [page] | <code>Number</code> | default: 1 |
-| [count] | <code>Number</code> | default: 30 |
+| category | `Number` | Refer to [Categories](https://github.com/siutsin/lihkg-api-nodejs-client/blob/master/lib/constants.js) |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
 
-<a name="getThread"></a>
+<a name="thread.getThread"></a>
 
-### .getThread(threadID, [page, count]) ⇒ <code>Promise</code>
+#### .getThread(threadID, [page, count]) ⇒ `Promise`
 Use this method to get a thread for the unique ID.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| threadID | <code>Number</code> | Thread id returned from the threads list |
-| [page] | <code>Number</code> | default: 1 |
-| [count] | <code>Number</code> | default: 30 |
+| threadID | `Number` | Thread id returned from the threads list |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+<a name="thread.search"></a>
+
+#### .search(query, [page, count]) ⇒ `Promise`
+Use this method to search threads contain the query in the title.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| query | `String` | query string |
+| [page] | `Number` | default: 1 |
+| [count] | `Number` | default: 30 |
+
+### Auth
+
+<a name="auth.login"></a>
+
+#### .login(email, password) ⇒ `Promise`
+Use this method to login. User ID and token is cached for further authentication.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| email | `String` | username |
+| password | `String` | password |
 
 ## Special Thanks
 

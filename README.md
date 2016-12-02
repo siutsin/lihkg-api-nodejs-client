@@ -5,7 +5,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/siutsin/lihkg-api-nodejs-client/badge.svg)](https://coveralls.io/github/siutsin/lihkg-api-nodejs-client)
 
 # lihkg-api-nodejs-client
-=========
 
 LIHKG API client for node.js
 
